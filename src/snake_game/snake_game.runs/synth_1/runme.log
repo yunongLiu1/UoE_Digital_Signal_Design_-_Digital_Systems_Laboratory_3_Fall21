@@ -1,0 +1,636 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+WARNING: [Synth 8-976] StrobeCount has already been declared [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:42]
+WARNING: [Synth 8-2654] second declaration of StrobeCount ignored [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:42]
+INFO: [Synth 8-994] StrobeCount is declared here [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:35]
+WARNING: [Synth 8-992] DecCountAndDOT0 is already implicitly declared earlier [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:43]
+WARNING: [Synth 8-992] DecCountAndDOT1 is already implicitly declared earlier [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:44]
+WARNING: [Synth 8-992] DecCountAndDOT2 is already implicitly declared earlier [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:45]
+WARNING: [Synth 8-992] DecCountAndDOT3 is already implicitly declared earlier [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:46]
+WARNING: [Synth 8-2611] redeclaration of ansi port SEG_SELECT is not allowed [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:66]
+WARNING: [Synth 8-2611] redeclaration of ansi port DEC_OUT is not allowed [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:67]
+WARNING: [Synth 8-976] DIE has already been declared [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:84]
+WARNING: [Synth 8-2654] second declaration of DIE ignored [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:84]
+INFO: [Synth 8-994] DIE is declared here [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:41]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 272.535 ; gain = 96.793
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:23]
+INFO: [Synth 8-638] synthesizing module 'Master_state_machine' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Master_state_machine.v:23]
+WARNING: [Synth 8-567] referenced signal 'score' should be on the sensitivity list [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Master_state_machine.v:45]
+WARNING: [Synth 8-567] referenced signal 'FAIL' should be on the sensitivity list [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Master_state_machine.v:45]
+INFO: [Synth 8-256] done synthesizing module 'Master_state_machine' (1#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Master_state_machine.v:23]
+INFO: [Synth 8-638] synthesizing module 'Navigation_state_machine' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Navigation_state_machine.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Navigation_state_machine' (2#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Navigation_state_machine.v:23]
+INFO: [Synth 8-638] synthesizing module 'Score_counter' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'Counter1' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 17 - type: integer 
+	Parameter COUNTER_MAX bound to: 99999 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1' (3#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-350] instance 'Bit17Counter' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:57]
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized0' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
+	Parameter COUNTER_MAX bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized0' (3#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-350] instance 'Bit2Counter' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:67]
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized1' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 4 - type: integer 
+	Parameter COUNTER_MAX bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized1' (3#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-350] instance 'Faliure' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:77]
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized2' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 4 - type: integer 
+	Parameter COUNTER_MAX bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized2' (3#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized3' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 1 - type: integer 
+	Parameter COUNTER_MAX bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized3' (3#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'COUNT' does not match port width (1) of module 'Counter1__parameterized3' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:106]
+WARNING: [Synth 8-350] instance 'Bit1' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:102]
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized4' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 30 - type: integer 
+	Parameter COUNTER_MAX bound to: 99999999 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized4' (3#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-350] instance 'SLOWDOWN' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:113]
+INFO: [Synth 8-638] synthesizing module 'Minus_Counter' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Minus_Counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 4 - type: integer 
+	Parameter COUNTER_MAX bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Minus_Counter' (4#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Minus_Counter.v:23]
+WARNING: [Synth 8-350] instance 'countdown2' of module 'Minus_Counter' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:130]
+INFO: [Synth 8-638] synthesizing module 'Multiplexer_4way' [C:/Users/mac/DS LAB/dlab_5/dlab_5.srcs/sources_1/new/Multiplexer_4way.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/mac/DS LAB/dlab_5/dlab_5.srcs/sources_1/new/Multiplexer_4way.v:39]
+INFO: [Synth 8-256] done synthesizing module 'Multiplexer_4way' (5#1) [C:/Users/mac/DS LAB/dlab_5/dlab_5.srcs/sources_1/new/Multiplexer_4way.v:23]
+INFO: [Synth 8-638] synthesizing module 'Seg7Display' [C:/Users/mac/DS LAB/dlab_5/dlab_5.srcs/sources_1/new/Seg7Display.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/mac/DS LAB/dlab_5/dlab_5.srcs/sources_1/new/Seg7Display.v:34]
+INFO: [Synth 8-226] default block is never used [C:/Users/mac/DS LAB/dlab_5/dlab_5.srcs/sources_1/new/Seg7Display.v:44]
+INFO: [Synth 8-256] done synthesizing module 'Seg7Display' (6#1) [C:/Users/mac/DS LAB/dlab_5/dlab_5.srcs/sources_1/new/Seg7Display.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Score_counter' (7#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Score_counter.v:23]
+WARNING: [Synth 8-689] width (2) of port connection 'Master_state' does not match port width (1) of module 'Score_counter' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:78]
+WARNING: [Synth 8-350] instance 'SC' of module 'Score_counter' requires 10 connections, but only 9 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:70]
+INFO: [Synth 8-638] synthesizing module 'vga_all1' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/vga_all.v:23]
+INFO: [Synth 8-638] synthesizing module 'VGA1' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/vga.v:23]
+	Parameter VerTimeToPulseWidthEnd bound to: 10'b0000000010 
+	Parameter VerTimeToBackPorchEnd bound to: 10'b0000011111 
+	Parameter VerTimeToDisplayTimeEnd bound to: 10'b0111111111 
+	Parameter VerTimeToFrontPorchEnd bound to: 10'b1000001001 
+	Parameter HorzTimeToPulseWidthEnd bound to: 10'b0001100000 
+	Parameter HorzTimeToBackPorchEnd bound to: 10'b0010010000 
+	Parameter HorzTimeToDisplayTimeEnd bound to: 10'b1100010000 
+	Parameter HorzTimeToFrontPorchEnd bound to: 10'b1100100000 
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized5' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
+	Parameter COUNTER_MAX bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized5' (7#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-350] instance 'SlowDownCounter' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/vga.v:52]
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized6' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 10 - type: integer 
+	Parameter COUNTER_MAX bound to: 799 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized6' (7#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized7' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 9 - type: integer 
+	Parameter COUNTER_MAX bound to: 520 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized7' (7#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-689] width (10) of port connection 'COUNT' does not match port width (9) of module 'Counter1__parameterized7' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/vga.v:77]
+WARNING: [Synth 8-350] instance 'VerCounter' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/vga.v:73]
+INFO: [Synth 8-256] done synthesizing module 'VGA1' (8#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/vga.v:23]
+INFO: [Synth 8-256] done synthesizing module 'vga_all1' (9#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/vga_all.v:23]
+INFO: [Synth 8-638] synthesizing module 'Target_generator' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Target_generator.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Target_generator' (10#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Target_generator.v:23]
+INFO: [Synth 8-638] synthesizing module 'Snake_control' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Snake_control.v:22]
+	Parameter MaxX bound to: 160 - type: integer 
+	Parameter MaxY bound to: 120 - type: integer 
+	Parameter SnakeLength bound to: 30 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Counter1__parameterized8' [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 24 - type: integer 
+	Parameter COUNTER_MAX bound to: 9999999 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter1__parameterized8' (10#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/counter.v:23]
+WARNING: [Synth 8-350] instance 'snake' of module 'Counter1' requires 5 connections, but only 4 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Snake_control.v:47]
+WARNING: [Synth 8-567] referenced signal 'TargetX' should be on the sensitivity list [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Snake_control.v:110]
+WARNING: [Synth 8-567] referenced signal 'TargetY' should be on the sensitivity list [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Snake_control.v:110]
+INFO: [Synth 8-256] done synthesizing module 'Snake_control' (11#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Snake_control.v:22]
+WARNING: [Synth 8-350] instance 'MAIN' of module 'Snake_control' requires 9 connections, but only 8 given [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:105]
+WARNING: [Synth 8-3848] Net DIE in module/entity Top does not have driver. [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:41]
+INFO: [Synth 8-256] done synthesizing module 'Top' (12#1) [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 297.480 ; gain = 121.738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SC:DIE to constant 0 [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:70]
+WARNING: [Synth 8-3295] tying undriven pin VGA_Display:DIE to constant 0 [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/sources_1/new/Top.v:85]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 297.480 ; gain = 121.738
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/constrs_1/new/snakeXDC.xdc]
+Finished Parsing XDC File [C:/Users/mac/DS LAB/snake_game/snake_game.srcs/constrs_1/new/snakeXDC.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 593.051 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "FrameCount" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "SnakeState_X" won't be mapped to RAM because address size (24) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "SnakeState_X" won't be mapped to RAM because address size (24) is larger than maximum supported(18)
+INFO: [Synth 8-5544] ROM "SnakeState_X" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SnakeState_Y" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   4 Input     12 Bit       Adders := 2     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               15 Bit    Registers := 2     
+	               12 Bit    Registers := 3     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 31    
+	                7 Bit    Registers := 31    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 4     
+	   4 Input     12 Bit        Muxes := 1     
+	  31 Input     12 Bit        Muxes := 1     
+	  32 Input     12 Bit        Muxes := 1     
+	  30 Input     10 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	  19 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+	  20 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Master_state_machine 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module Navigation_state_machine 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Counter1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Counter1__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module Counter1__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module Counter1__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module Counter1__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Counter1__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Minus_Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module Multiplexer_4way 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      5 Bit        Muxes := 1     
+Module Seg7Display 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module Counter1__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module Counter1__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Counter1__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module VGA1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module vga_all1 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     12 Bit       Adders := 2     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 3     
+Module Target_generator 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               15 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module Counter1__parameterized8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Snake_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 30    
+	                7 Bit    Registers := 30    
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  31 Input     12 Bit        Muxes := 1     
+	  32 Input     12 Bit        Muxes := 1     
+	  30 Input     10 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	  19 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+	  20 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "FrameCount" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "SnakeState_X" won't be mapped to RAM because address size (24) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 593.051 ; gain = 417.309
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/Faliure/count_value_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/Faliure/count_value_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/Faliure/count_value_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/Faliure/count_value_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/Faliure/Trigger_out_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/LED_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/Bit1/count_value_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (\SC/Faliure/count_value_reg[3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/Faliure/count_value_reg[2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/Faliure/count_value_reg[1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/Faliure/count_value_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/Faliure/Trigger_out_reg ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/Bit1/count_value_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/LED_reg[5] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/LED_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\VGA_Display/vga/COLOUR_OUT_reg[10] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\VGA_Display/COLOUR_reg[10] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/snake/Trigger_out_reg ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/colour_reg[10] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/colour_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/DIE_reg ) is unused and will be removed from module Top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SC/LED_reg[4] )
+WARNING: [Synth 8-3332] Sequential element (\SC/Bit4/count_value_reg[3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/Bit4/count_value_reg[2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/LED_reg[4] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\SC/LED_reg[3] ) is unused and will be removed from module Top.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 593.051 ; gain = 417.309
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 593.051 ; gain = 417.309
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\MAIN/Growth_reg[0]__0 ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/Growth_reg[1]__0 ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/Growth_reg[2]__0 ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/Growth_reg[3]__0 ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\MAIN/Growth_reg[4]__0 ) is unused and will be removed from module Top.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 612.230 ; gain = 436.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 612.230 ; gain = 436.488
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 612.230 ; gain = 436.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 612.230 ; gain = 436.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 612.230 ; gain = 436.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 612.230 ; gain = 436.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    37|
+|3     |LUT1   |    97|
+|4     |LUT2   |    78|
+|5     |LUT3   |    56|
+|6     |LUT4   |    86|
+|7     |LUT5   |    77|
+|8     |LUT6   |   387|
+|9     |MUXF7  |     1|
+|10    |FDRE   |   521|
+|11    |FDSE   |   166|
+|12    |IBUF   |     6|
+|13    |OBUF   |    36|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+-------------------------+------+
+|      |Instance              |Module                   |Cells |
++------+----------------------+-------------------------+------+
+|1     |top                   |                         |  1549|
+|2     |  MAIN                |Snake_control            |   825|
+|3     |    snake             |Counter1__parameterized8 |    88|
+|4     |  MSM                 |Master_state_machine     |    11|
+|5     |  NSM                 |Navigation_state_machine |     6|
+|6     |  SC                  |Score_counter            |   178|
+|7     |    Bit17Counter      |Counter1                 |    59|
+|8     |    Bit2Counter       |Counter1__parameterized0 |    19|
+|9     |    Bit4              |Counter1__parameterized2 |     5|
+|10    |    SLOWDOWN          |Counter1__parameterized4 |    75|
+|11    |    countdown1        |Minus_Counter            |    10|
+|12    |    countdown2        |Minus_Counter_0          |     8|
+|13    |  TG                  |Target_generator         |    58|
+|14    |  VGA_Display         |vga_all1                 |   428|
+|15    |    vga               |VGA1                     |   372|
+|16    |      HorCounter      |Counter1__parameterized6 |    41|
+|17    |      SlowDownCounter |Counter1__parameterized5 |     6|
+|18    |      VerCounter      |Counter1__parameterized7 |    28|
++------+----------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 612.230 ; gain = 436.488
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 612.230 ; gain = 108.289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 612.230 ; gain = 436.488
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+73 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 612.230 ; gain = 404.035
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 612.230 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 29 16:37:53 2021...
